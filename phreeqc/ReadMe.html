@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BGCOLOR="#ffffde">
+<FONT FACE="Times New Roman" NAME="Times" COLOR="red">
+<center>
+<H1>PHREEQC version 3</H1>
+</center>
+<FONT COLOR="black">
+
+<P>Most important new features (relative to version 2.18):
+<ul>
+<li>Precise calculation of gas-solubilities with the Peng-Robinson Equation of State.
+<li>Pressure effects on mineral solubilities.
+<li>Multiple USER_GRAPH's with flexible -plot_xy function. It is possible
+    to define line and symbol properties in addition to
+    graph_x, graph_y from PfW. Used extensively in the examples, see, ex6 and ex19.
+    Note that zedgraph.dll must be in the directory of phreeqc.exe.
+<li>INCLUDE$ that allows to read in other files into the input file, and
+    to execute them. The files can be written during the run with
+    USER_PUNCH. See ex8 and ex21.
+<li> .._MODIFY keywords that permit to change any model property, see ex20.
+</ul>
+<!--P>Download <A href="http://appt.home.xs4all.nl/temp/phreeqc3.exe"><i>phreeqc3.Installer.exe</i>’</A>, it will install phreeqc3 and Notepad++.-->
+
+<p>PHREEQC version 3 is installed in c:\phreeqc and subdirectories:
+<ul>
+<li>MANUAL: the manuals and help file phreeqc.chm.
+<li>EXMPLS: the examples from the manual. Run them with p.bat in a DOS window, for example:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p ex8.phr
+<br>&nbsp;&nbsp; It will show 2 graphs and write the output file ex8.phr.out.
+<br>&nbsp;&nbsp; Or, better, use Notepad++, see below.
+<li>DATABASE: various databases.
+<li>NP++: batch files that run PHREEQC tools from within Notepad++.
+<li>PRESSURE: input files showing pressure effects on gas solubilities, scaling minerals. Run them with p.bat or run_all.bat in a DOS window, or with Notepad++.
+<!--li>day_1..etc.: course exercises<-->
+</ul>
+  <hr noshade>
+<P>Notepad++ is recommended for writing, editing and running PHREEQC 3 input files.
+<br>Notepad++ provides:
+<TABLE width=1150  border=0>
+<tr>
+ <TD width="40%" bgColor="#ffffde" valign=top>
+
+<br>&nbsp;&nbsp; * syntax highlighting
+<br>&nbsp;&nbsp; * autocompletion
+<br>&nbsp;&nbsp; * calltips for BASIC functions and KEYWORDS
+<br>&nbsp;&nbsp; * colored numbers (<FONT COLOR="red">1</font> and l are differently colored!)
+<br>&nbsp;&nbsp; * bracket matching: print (1 + 9.0) / <FONT COLOR="red"> (</font>9 + 1.0<FONT COLOR="red">)</font><blink>|</blink>
+<br>&nbsp;&nbsp; * (un)commenting multiple lines at once
+<br>&nbsp;&nbsp; * column editor for easy BASIC line renumbering
+<br>&nbsp;&nbsp; * shortcuts: e.g., Ctrl+F6 calls PHREEQC on the current file
+<br>&nbsp;&nbsp; * file recognition on extension: .ppi .pqi .phrq .phr .dat .out
+<br>&nbsp;&nbsp; * Sections in between a '#[' and  a '#]' can be folded up.
+<p>Notepad++ will be installed along with the phreeqc3 files in your computer.
+<p>Details are in the file c:\phreeqc\np++\Phr_in_NP++.txt.
+<p>
+<center><i>We appreciate to hear your comments.</i></center>
+
+<br>
+  <TD> <center>
+<IMG SRC="ex8.png "HEIGHT = 926 WIDTH = 770></IMG>
+</center>
+</table>
+
+</font>
+</BODY>
+</html>

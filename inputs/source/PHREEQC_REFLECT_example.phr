@@ -1,0 +1,85 @@
+DATABASE C:\phreeqc\database2021\PITZER.DAT
+TITLE REFLECT Github example
+
+########### Step 1: From measuerd lab to reservoir solution composition ##########
+SOLUTION 1 
+	temp 		21
+	pressure 	1
+	pH  		6.2
+	pe 		-3.5
+	units 	mg/L
+	density 1 calculate 1.1682
+Na	85000	charge
+K	2200
+Ca	7450
+Mg	1150
+Ba	5.5
+Sr	290
+Fe	175
+Cl	145000
+S(6)	585
+C(4)	0.001  calcite 0
+Mn	9.25
+
+REACTION_TEMPERATURE 1
+100 				
+REACTION_PRESSURE 1
+331
+GAS_PHASE 1
+-fixed_pressure
+-pressure 	1
+-volume 	0.361 		
+-temperature	21
+	CO2(g) 	0.25659		#mol percent
+	Mtg(g)	0.57209
+	Ntg(g) 	0.10556
+EQUILIBRIUM_PHASES 1
+	Barite 			0 0
+	Quartz			0 1
+SAVE SOLUTION 2
+END
+
+########### Step 3: Gas exsolution and pressure decrease ##########
+USE SOLUTION 2
+REACTION_TEMPERATURE 2
+100
+REACTION_PRESSURE 2
+10
+GAS_PHASE 2
+-fixed_pressure
+-pressure 	10		
+-volume 	0
+-temperature	100
+	CO2(g) 	0
+	Mtg(g)	0
+	Ntg(g) 	0
+EQUILIBRIUM_PHASES 2
+Calcite		0	0
+SAVE SOLUTION 3
+END
+
+########### Step 4: Cooling ##########
+USE SOLUTION 3
+REACTION_TEMPERATURE 3
+70
+EQUILIBRIUM_PHASES 3
+Barite		0 0
+Calcite		0 0
+Chalcedony	0 0
+SAVE SOLUTION 4
+SELECTED_OUTPUT
+	-file HEK_GasPhase_Pitzer2021_Cool.txt
+ 	-state false
+	-simulation false
+	-solution false
+	-distance false
+	-time false
+ 	-temperature true
+        -totals Ba C Ca Cl Fe K Mg Mn Mtg Na Ntg S Si Sr 
+	-equilibrium_phases Calcite Barite Chalcedony
+	-saturation_indices Calcite Barite Chalcedony CO2(g) Mtg(g) Ntg(g) 
+	-gases CO2(g) Mtg(g) Ntg(g)
+END
+
+
+
