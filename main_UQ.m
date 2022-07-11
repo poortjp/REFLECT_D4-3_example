@@ -67,7 +67,11 @@ T = 70;
 % Create an array containing the brine composition samples
 % The resulting array will have a size of NxM, where N is the number of
 % samples and M is the number of elements (thus each row in the array is a
-% single brine composition)
+% single brine composition). Samples are drawn from a uniform distribution
+% between upper and lower bounds which are determined by adding and 
+% subtracting the specified maximum percentage deviations from the
+% specified nominal value of each element. This example does not include
+% any other distribution besides uniform.
 % The order of columns is the same as the order of elements defined
 samples = create_samples(nominal_vals, var_percentages, num_samples);
 
