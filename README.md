@@ -4,4 +4,4 @@ Repository for an example of the workflow developed as part of work package 4 of
 
 For more details on the workflow, file structure of this repository, and how to run the script, please refer to the "example_guide.pdf" document.
 
-All scripts in this repository have been developed and tested for MATLAB version 2019a, and cannot be guaranteed to work with older or newer versions.  
+All scripts in this repository have been developed MATLAB version 2019a and tested on version up to 2021a, but cannot be guaranteed with certainty to work with other versions.  
