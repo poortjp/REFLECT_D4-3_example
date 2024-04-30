@@ -47,7 +47,7 @@ var_percentages = [30 30 30 30 5 40 20 40];
 
 % Total number of samples (will be ignored when sample strategy is a
 % permutation)
-num_samples = 100;
+num_samples = 10;
 
 
 %% Pressure and temperature (user-defined)
