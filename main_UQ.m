@@ -1,5 +1,6 @@
 %% Main 
-% file for automating uncertainty quantification of PHREEQC models
+% File for automating uncertainty quantification of PHREEQC models
+% Publically available version
 
 clc
 clear all
